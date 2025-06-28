@@ -1,0 +1,555 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenB",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_lpToken",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "provider",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountA",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountB",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "liquidity",
+						"type": "uint256"
+					}
+				],
+				"name": "LiquidityAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "provider",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountA",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "amountB",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "liquidity",
+						"type": "uint256"
+					}
+				],
+				"name": "LiquidityRemoved",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenB",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountADesired",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountBDesired",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountAMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountBMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "addLiquidity",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountA",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountB",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "liquidity",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "tokenIn",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "tokenOut",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					}
+				],
+				"name": "getAmountOut",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountOut",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "base",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "quote",
+						"type": "address"
+					}
+				],
+				"name": "getPrice",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "price",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "lpToken",
+				"outputs": [
+					{
+						"internalType": "contract ILPToken",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenA",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_tokenB",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "liquidity",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountAMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountBMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "removeLiquidity",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountA",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountB",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "reserveA",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "reserveB",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "amountIn",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amountOutMin",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address[]",
+						"name": "path",
+						"type": "address[]"
+					},
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deadline",
+						"type": "uint256"
+					}
+				],
+				"name": "swapExactTokensForTokens",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "amounts",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenA",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenB",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalLiquidity",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "total",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256)": {
+					"params": {
+						"_tokenA": "Address of token A (must match contract tokenA)",
+						"_tokenB": "Address of token B (must match contract tokenB)",
+						"amountADesired": "Desired amount of token A to add",
+						"amountAMin": "Minimum amount of token A accepted (slippage protection)",
+						"amountBDesired": "Desired amount of token B to add",
+						"amountBMin": "Minimum amount of token B accepted (slippage protection)",
+						"deadline": "Timestamp by which transaction must be mined",
+						"to": "Address receiving LP tokens"
+					},
+					"returns": {
+						"amountA": "Actual amount of token A added",
+						"amountB": "Actual amount of token B added",
+						"liquidity": "Amount of LP tokens minted to `to`"
+					}
+				},
+				"constructor": {
+					"params": {
+						"_lpToken": "Address of LP token contract",
+						"_tokenA": "Address of token A",
+						"_tokenB": "Address of token B"
+					}
+				},
+				"getAmountOut(address,address,uint256)": {
+					"params": {
+						"amountIn": "Amount of input tokens",
+						"tokenIn": "Input token address",
+						"tokenOut": "Output token address"
+					},
+					"returns": {
+						"amountOut": "Expected output token amount"
+					}
+				},
+				"getPrice(address,address)": {
+					"params": {
+						"base": "Token to price (numerator)",
+						"quote": "Token as reference (denominator)"
+					},
+					"returns": {
+						"price": "Current price scaled by 1e18"
+					}
+				},
+				"removeLiquidity(address,address,uint256,uint256,uint256,address,uint256)": {
+					"params": {
+						"_tokenA": "Address of token A (must match contract tokenA)",
+						"_tokenB": "Address of token B (must match contract tokenB)",
+						"amountAMin": "Minimum amount of token A accepted (slippage protection)",
+						"amountBMin": "Minimum amount of token B accepted (slippage protection)",
+						"deadline": "Timestamp by which transaction must be mined",
+						"liquidity": "Amount of LP tokens to burn",
+						"to": "Address to send withdrawn tokens"
+					},
+					"returns": {
+						"amountA": "Amount of token A returned",
+						"amountB": "Amount of token B returned"
+					}
+				},
+				"swapExactTokensForTokens(uint256,uint256,address[],address,uint256)": {
+					"params": {
+						"amountIn": "Exact amount of input tokens",
+						"amountOutMin": "Minimum acceptable output tokens (slippage protection)",
+						"deadline": "Timestamp by which transaction must be mined",
+						"path": "Array of token addresses [input, output]",
+						"to": "Recipient address for output tokens"
+					},
+					"returns": {
+						"amounts": "Array with input and output token amounts"
+					}
+				},
+				"totalLiquidity()": {
+					"returns": {
+						"total": "Total liquidity in pool"
+					}
+				}
+			},
+			"title": "SimpleSwap - Basic AMM for token swaps and liquidity management",
+			"version": 1
+		},
+		"userdoc": {
+			"events": {
+				"LiquidityAdded(address,uint256,uint256,uint256)": {
+					"notice": "Emitted when liquidity is added"
+				},
+				"LiquidityRemoved(address,uint256,uint256,uint256)": {
+					"notice": "Emitted when liquidity is removed"
+				}
+			},
+			"kind": "user",
+			"methods": {
+				"addLiquidity(address,address,uint256,uint256,uint256,uint256,address,uint256)": {
+					"notice": "Adds liquidity to the pool with specified tokens and mints LP tokens"
+				},
+				"constructor": {
+					"notice": "Constructor sets the tokens and LP token contract addresses"
+				},
+				"getAmountOut(address,address,uint256)": {
+					"notice": "Calculates expected output token amount for given input amount, factoring fees"
+				},
+				"getPrice(address,address)": {
+					"notice": "Returns price of base token in terms of quote token (scaled by 1e18)"
+				},
+				"lpToken()": {
+					"notice": "LP token contract managing liquidity shares"
+				},
+				"owner()": {
+					"notice": "Contract owner address"
+				},
+				"removeLiquidity(address,address,uint256,uint256,uint256,address,uint256)": {
+					"notice": "Removes liquidity by burning LP tokens and returning proportional token amounts"
+				},
+				"reserveA()": {
+					"notice": "Reserve of token A in the liquidity pool"
+				},
+				"reserveB()": {
+					"notice": "Reserve of token B in the liquidity pool"
+				},
+				"swapExactTokensForTokens(uint256,uint256,address[],address,uint256)": {
+					"notice": "Swaps an exact amount of input tokens for a minimum amount of output tokens"
+				},
+				"tokenA()": {
+					"notice": "Address of token A in the pair"
+				},
+				"tokenB()": {
+					"notice": "Address of token B in the pair"
+				},
+				"totalLiquidity()": {
+					"notice": "Returns total liquidity as geometric mean of reserves"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"SimpleSwap.sol": "SimpleSwap"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"SimpleSwap.sol": {
+			"keccak256": "0x36d5d3989f9d9eb39783db3d7a2fdc4145148863bb550069802c37d373091996",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c64748dd3a85a6a958427a233052fda082ef67b8a02ba5d6a289eff59b850d30",
+				"dweb:/ipfs/QmPVG7DbLZojYv12WEUpbe8xFP3eu97PjMoLAqDhypUCrf"
+			]
+		}
+	},
+	"version": 1
+}

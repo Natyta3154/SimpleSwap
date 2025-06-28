@@ -1,0 +1,46 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"details": "Contexto para obtener el `msg.sender`.",
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"LPToken.sol": "Context"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"LPToken.sol": {
+			"keccak256": "0x1eeaa3c2f4c5dad7856a3b6ac9279dadc345fb40a61b16b06ef5b281b8c39ff9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5446760d5b525867ae435b4e27d89d20c72bdb26ae6483a1c4a0d5eb449579e3",
+				"dweb:/ipfs/QmSXiihxK3eiNYVutQiZYAcixzLijktZ8v7hWAT7hsqjCx"
+			]
+		}
+	},
+	"version": 1
+}

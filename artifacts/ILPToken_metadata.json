@@ -1,0 +1,127 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "account",
+						"type": "address"
+					}
+				],
+				"name": "balanceOf",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "from",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "burn",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "mint",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "totalSupply",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"balanceOf(address)": {
+					"notice": "Returns LP token balance of an account"
+				},
+				"burn(address,uint256)": {
+					"notice": "Burns LP tokens from an address"
+				},
+				"mint(address,uint256)": {
+					"notice": "Mints LP tokens to an address"
+				},
+				"totalSupply()": {
+					"notice": "Returns total supply of LP tokens"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"SimpleSwap.sol": "ILPToken"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"SimpleSwap.sol": {
+			"keccak256": "0x36d5d3989f9d9eb39783db3d7a2fdc4145148863bb550069802c37d373091996",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c64748dd3a85a6a958427a233052fda082ef67b8a02ba5d6a289eff59b850d30",
+				"dweb:/ipfs/QmPVG7DbLZojYv12WEUpbe8xFP3eu97PjMoLAqDhypUCrf"
+			]
+		}
+	},
+	"version": 1
+}
